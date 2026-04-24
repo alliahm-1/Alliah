@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Epilogue", sans-serif;
+  --font-label: "Space Grotesk", monospace;
+  
+  --color-surface: #fbf9f8;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-bright: #fbf9f8;
+  --color-surface-container: #f0eded;
+  --color-on-surface: #1b1c1c;
+  --color-on-surface-variant: #4c444c;
+  
+  --color-primary: #6a4972;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #d9ee54;
+  --color-on-secondary: #5e6a00;
+
+  --spacing-stack-sm: 12px;
+  --spacing-stack-md: 32px;
+  --spacing-stack-lg: 80px;
+  --spacing-margin-edge: 40px;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-headline font-semibold tracking-tight;
+  }
+
+  .label-caps {
+    @apply font-label text-[12px] uppercase tracking-[0.1em] font-bold;
+  }
+}
+
+.lab-grid {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, #f0eded 1px, transparent 1px), 
+                    linear-gradient(to bottom, #f0eded 1px, transparent 1px);
+}
